@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latin Dictionary</title>
+    <link rel="stylesheet" href="dictionary.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="learning.html">Learning</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Latin Dictionary</h1>
+        <p>Here you can add, edit, or delete Latin words.</p>
+        <form id="dictionary-form">
+            <input type="text" id="word" placeholder="Enter Latin word" required>
+            <input type="text" id="definition" placeholder="Enter definition" required>
+            <button type="submit" class="btn">Add Word</button>
+        </form>
+        <button id="sort-btn" class="btn" style="margin-top:10px;">Sort A-Z</button>
+        <ul id="dictionary-list">
+            <!-- Words will be dynamically added here -->
+        </ul>
+    </main>
+    <footer>
+        <p>&copy; 2023 Dynamic Website. All rights reserved.</p>
+    </footer>
+    <script src="dictionary.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: #fafafa;
+    /* REMOVE any flex, align-items, justify-content, or height properties */
+}
+
+header {
+    width: 100%;
+    background-color: #333;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+main {
+    margin-top: 60px; /* Make sure this is at least as tall as your header */
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    /* REMOVE any flex, align-items, justify-content, or height properties */
+}
+
+#dictionary-list {
+    margin-top: 20px;
+    padding: 0;
+    list-style: none;
+    /* Optional: Uncomment to make the dictionary list itself scrollable
+    max-height: 400px;
+    overflow-y: auto;
+    */
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
