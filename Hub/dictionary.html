@@ -26,7 +26,9 @@
             <button type="submit" class="btn">Add Word</button>
         </form>
         <button id="sort-btn" class="btn" style="margin-top:10px;">Sort A-Z</button>
-        
+        <input type="file" id="import-input" accept="application/json" style="display:none;">
+        <label for="import-input" class="btn" style="margin-top:10px; cursor:pointer;">Import Dictionary</label>
+        <button id="export-btn" class="btn" style="margin-top:10px;">Export Dictionary</button>
         <ul id="dictionary-list">
             <!-- Words will be dynamically added here -->
         </ul>
