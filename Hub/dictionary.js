@@ -116,6 +116,42 @@ sortBtn.addEventListener('click', () => {
     renderDictionary(true);
 });
 
+// Export dictionary as JSON
+async function exportDictionary() {
+    const words = await getAllWords();
+    const blob = new Blob([JSON.stringify(words, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'latin_dictionary.json';
+    a.click();
+    URL.revokeObjectURL(url);
+}
+
+// Add export button event
+document.getElementById('export-btn').addEventListener('click', exportDictionary);
+
+// Import dictionary from JSON
+async function importDictionary(event) {
+    const file = event.target.files[0];
+    if (!file) return;
+    const text = await file.text();
+    let words;
+    try {
+        words = JSON.parse(text);
+    } catch {
+        alert('Invalid file format.');
+        return;
+    }
+    for (const { word, definition } of words) {
+        await addWord(word, definition);
+    }
+    renderDictionary();
+}
+
+// Add import button event
+document.getElementById('import-input').addEventListener('change', importDictionary);
+
 (async () => {
   db = await openDB();
   await migrateIfNeeded();

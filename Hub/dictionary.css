@@ -35,6 +35,36 @@ main {
     */
 }
 
+#word {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #0e0808;
+    color: turquoise;
+    border-radius: 5px;
+    font-style: italic;
+}
+
+#definition {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #050a02;
+    color: chartreuse;
+    border-radius: 5px;
+    font-style: italic;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #007BFF;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none; /* Ensure buttons look like links */
+}
+
 .navbar {
     display: flex;
     justify-content: center;
